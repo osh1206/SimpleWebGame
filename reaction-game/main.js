@@ -26,13 +26,13 @@ box.addEventListener( 'click', () => {
 		box.textContent = '너무 빨랐습니다! 다시 클릭해서 시작하세요.';
 		box.className = 'ready';
 		result.textContent = '';
-		state = 'resdy';
+		state = 'ready';
 	
 	} else if (state === 'active') {
 		const reactionTime = Date.now() - startTime;
 		box.textContent = '클릭하여 다시 시작';
 		box.className = 'ready';
-		result.textContent = '반응 속도: ${reactionTime}ms';
+		result.textContent = '반응 속도: ' + reactionTime + 'ms';
 		state = 'ready';
 	} 
 	
