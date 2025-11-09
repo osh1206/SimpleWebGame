@@ -24,23 +24,52 @@ h1 {
   justify-content: center;
   border-radius: 15px;
   font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border: 3px solid #666;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+#game-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+#game-box:active {
+  transform: scale(0.98);
 }
 
 #game-box.ready {
   background-color: #444;
+  border-color: #888;
 }
 
 #game-box.waiting {
-  background-color: red;
+  background-color: #ff4444;
+  border-color: #ff0000;
+  animation: pulse 0.5s infinite;
 }
 
 #game-box.active {
-  background-color: green;
+  background-color: #44ff44;
+  border-color: #00ff00;
+  animation: pulse 0.3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
 }
 
 #result {
   margin-top: 30px;
   font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffff00;
 }

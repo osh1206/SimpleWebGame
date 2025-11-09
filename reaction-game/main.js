@@ -3,7 +3,7 @@ const result = document.getElementById('result');
 
 let startTime;    // 반응 시작 시각
 let timeoutId;    // 타이머 ID
-let state = 'ready'; // ready -> wating -> active
+let state = 'ready'; // ready -> waitng -> active
 
 box.addEventListener( 'click', () => {
 	if (state === 'ready') {
